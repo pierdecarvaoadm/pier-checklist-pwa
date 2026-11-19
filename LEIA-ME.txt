@@ -1,0 +1,19 @@
+PIER CHECK-LIST PWA
+
+ARQUIVOS
+- index.html: aplicativo principal
+- manifest.webmanifest: instalação da PWA
+- service-worker.js: cache e funcionamento offline
+- offline.html: tela de contingência
+- icon-192.png e icon-512.png: ícones
+
+PUBLICAÇÃO
+1. Envie TODOS os arquivos para a mesma pasta na hospedagem.
+2. A hospedagem deve usar HTTPS. localhost também funciona para testes.
+3. Abra index.html uma vez com internet para preparar o cache offline.
+4. No Chrome/Edge, use Instalar aplicativo. No iPhone/iPad, use Compartilhar > Adicionar à Tela de Início.
+
+IMPORTANTE
+- Abrir index.html diretamente pelo explorador de arquivos (file://) não ativa o Service Worker.
+- O Service Worker fornece cache offline e dispara o pedido de sincronização quando a rede volta.
+- A gravação/sincronização dos dados continua usando a lógica já existente no aplicativo.
